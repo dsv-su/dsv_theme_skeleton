@@ -1,0 +1,708 @@
+input[type="submit"] {
+    background:#e17e33!important;
+    border:none; 
+    /*padding:0!important;*/
+    /*border  is optional*/
+    border-bottom:1px solid #444; 
+    cursor: pointer;
+    display: inline-block;
+    background-color: #e17e33;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.15);
+    color: white;
+    font-family: 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif;
+    font-size: 14px;
+    padding: 5px;
+    text-decoration: none;
+    width: 60px;
+    -webkit-appearance: none;
+}
+
+
+.button {
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+    width: 240px;
+    height: 200px;
+    padding-top: 55px;
+    color: #333;
+    font-size: 40px;
+    font-family: sans-serif;
+}
+
+.alert {
+    padding: 8px 35px 8px 14px;
+    margin-bottom: 20px;
+    color: #836636;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    background-color: #FEEFB3;
+    border: 1px solid #fbeed5;
+    border-radius: 8px;
+}
+
+.mono {
+    font-family: serif;
+}
+
+a {
+    color: #005b7f;
+}
+
+a:visited {
+    color: #7d7d7d;
+}
+
+a:hover {
+    color: black;
+}
+
+.center {
+    margin: 0 auto;
+    width: 800px;
+    text-align: center;
+}
+
+.navigation {
+    text-align: right;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: -20px;
+}
+
+.center > table {
+    margin-bottom: 20px;
+}
+
+table {
+    margin: auto;
+    font-family: "Helvetica Neue", Helvetica;
+    border-collapse: collapse;
+}
+
+.repo table {
+    margin-top: 10px;
+}
+
+.repolist {
+text-align:left;
+}
+.repo {
+    text-align:center;
+    display: inline-block;
+    margin: 20px;
+  /*  width: 222px; */
+    vertical-align: top;
+    background-color: #edeee1;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.repo h3 {
+    font-family: "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+    font-size: 15px;
+}
+.repo p {
+font-size: 12px;
+}
+
+.repo .head {
+font-family: "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+}
+
+th {
+font-size: 13px;
+}
+
+.repo .head  input {
+font-size: 11px;
+}
+
+.even {
+background-color:#eef8fa;
+}
+.even:last-child {
+background-color:#edeee1;
+}
+.odd:last-child {
+background-color:#edeee1;
+}
+
+.odd {
+background-color:#ffffff;
+}
+.odd .user-even {
+background-color:#edeee1;
+}
+.even .user-odd {
+background-color:#dadcc4;
+}
+.center > table > tbody > .even {
+    background-color:#eef8fa !important;
+}
+.center > table > tbody > .odd {             
+        background-color:#ffffff !important;
+}
+
+table td:last-child {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+body div p {
+    font-size: 16px;
+    font-family: "Helvetica Neue", Helvetica;
+}
+
+td {
+    border; none;
+    padding: 5px;
+}
+
+h2 {
+    font-family: "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+    font-size: 1.6em;
+    font-weight: 300;
+    text-align: center;
+}
+
+@charset "utf-8";
+
+/*
+ * CSS for the DSV Shibboleth DS and IDP services
+ *
+ * Simon Jarbrant, 2014
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font: 76%/1.6 Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* This fixes padding within divs */
+div {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+/* Fix for IE showing a blue border around link images*/
+a img {
+  border: none;
+}
+
+address {
+  font-style: normal;
+}
+
+#container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 994px;
+  min-height: 100%;
+  padding-bottom: 60px;
+}
+
+
+/*
+ * Header styling
+ * --------------
+ */
+
+#top-links, #header {
+  background-color: #002e5f;
+  color: white;
+}
+
+#header {
+  height: 109px;
+  margin-top: -1px;
+}
+
+#header-su-responsive {
+  float: left;
+  margin-top: 16px;
+  padding-left: 2%;
+}
+
+#header-su-responsive > img {
+  width: 94%;
+}
+
+#sec-logo-text {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.4em;
+  line-height: 1.2;
+  margin-top: -3px;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+#header-dsv {
+  float: left;
+  margin-left: 24px;
+}
+
+#header-su {
+  float: right;
+  margin-right: 24px;
+}
+
+
+/*
+ * Content styling
+ * ---------------
+ */
+
+#contents {
+  font-family: "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  padding-top: 12px;
+  text-align: center;
+}
+
+#contents > h1 {
+  font-size: 2.6em;
+  font-weight: 300;
+  margin-top: 40px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+#contents > .selection-box {
+  text-align: center;
+  display: inline-block;
+}
+
+#contents > form#login {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 80%;
+}
+
+#contents > form > section {
+  margin-bottom: 20px;
+}
+
+#contents > .selection-box h3,
+#contents > form > section > label {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+#contents > form > section > input.form-field {
+  border: solid 1px #a0a0a0;
+  border-radius: 3px;
+  font-size: 115%;
+  line-height: 120%;
+  padding: 4px 6px;
+  width: 170px;
+}
+
+#contents > form > section > input#username {
+  margin-left: 74px;
+}
+
+#contents > form > section > #username-helper {
+  color: #666;
+  display: inline-block;
+  font-size: 115%;
+  font-style: italic;
+}
+
+#contents > .selection-box .submit-button,
+#contents > form > section > button.form-button {
+  display: inline-block;
+  background-color: #e17e33;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  color: white;
+  font-family: 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif;
+  font-size: 14px;
+  margin: 10px 16px;
+  padding: 10px 18px;
+  text-decoration: none;
+}
+
+.center > a {
+  padding: 20px 20px 20px;
+  background-color: #fff;
+  border: 1px solid #dfdfdf;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  display: inline-block;
+  margin: 20px;
+  text-decoration: none;
+}
+
+
+#contents > .selection-box p {
+  width: 100%;
+}
+
+#contents > .selection-box .description {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+}
+
+#contents > .selection-box .submit-button:hover,
+#contents > form > section > button.form-button:hover {
+  background-color: #d95e00;
+  cursor: pointer;
+}
+
+#contents > .selection-box .selection-description {
+  color: #333;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: left;
+  font-size: 120%;
+}
+
+.center > a,
+.center > a:visited {
+  text-decoration: none;
+  cursor: pointer;
+  color: #000;
+}
+
+.center > a:hover {
+  background-color: #eee;
+}
+
+/*
+ * Footer styling
+ * --------------
+ */
+
+#footer {
+  border-top: 1px solid #d2d7dc;
+  font-size: 10px;
+  margin: 4px 17px;
+  margin-top: 60px;
+}
+
+#footer b {
+  font-size: 12px;
+}
+
+#footer a:link {
+  color: #005b7f;
+}
+
+#footer a:hover {
+  color: #000;
+}
+
+#footer-left {
+  display: inline-block;
+  float: left;
+  padding-top: 11px;
+  padding-left: 11px;
+}
+
+#footer-right {
+  display: inline-block;
+  float: right;
+  padding-top: 11px;
+  padding-right: 11px;
+}
+
+
+/*
+ * Media queries
+ * -------------
+ */
+
+/* Small devices (only used for provider block sizing) */
+@media screen and (max-width: 480px) {
+  #header-dsv {
+    display: none;
+  }
+
+  #header-su {
+    display: none;
+  }
+
+  #contents {
+    width: 90%;
+  }
+
+
+}
+
+/* Small devices (phones and small tablets) */
+@media screen and (min-width: 481px) {
+  #header-dsv {
+    display: none;
+  }
+
+  #header-su {
+    display: none;
+  }
+
+  #contents {
+    width: 95%;
+  }
+
+  #contents .selection-box {
+    /*display: table-cell;*/
+    margin-top: 14px;
+    margin-bottom: 24px;
+    width: 32%;
+    vertical-align: top;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+}
+
+/* Fix for footer right links on cramped screens */
+@media screen and (max-width: 600px;) {
+  #footer-left,
+  #footer-right {
+    display: block;
+  }
+  #contents {
+    width: 95%;
+  }
+  #contents .selection-box {
+    width: 85%;
+  }
+}
+
+/* Small tablets */
+@media screen and (min-width: 600px) {
+  #header-su-responsive {
+    display: none;
+  }
+
+  #sec-logo-text {
+    display: none;
+  }
+
+  #header-dsv {
+    display: inline-block;
+    width: 40%;
+  }
+
+  #header-dsv > img {
+    width: 100%;
+  }
+
+  #header-su {
+    display: none;
+  }
+
+  #contents {
+    width: 95%;
+  }
+
+  #contents .selection-box {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+}
+
+/* Tablets */
+@media (min-width: 767px) {
+  #header {
+    height: 150px;
+  }
+
+  #header-dsv {
+    width: auto;
+  }
+
+  #contents {
+    width: 90%;
+  }
+
+  #button {
+    display: block;
+  }
+
+}
+
+/* Large tablets (landscape) and small desktops */
+@media screen and (min-width: 820px) {
+  #header-su {
+    display: inline-block;
+  }
+  #contents .selection-box {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* Large desktop */
+@media screen and (min-width: 940px) {
+  #container {
+    background-image: url(images/container-repeater.gif);
+    background-position: left top;
+    background-repeat: repeat-y;
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+}
+
+@media (max-width: 767px) {
+
+    .center {
+        width: 100%;
+    }
+
+    .center > a {
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;  
+    }
+
+    .navigation > p {
+        font-size: 14px;
+    }
+
+    .navigation {
+        margin-right: 5px;
+        margin-top: 10px;
+    }
+
+    .center > h2 {
+        margin-top: 20px;
+        margin-bottom: 16px;
+    }
+}
+
+
+
+.room {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    border: 1px solid #dfdfdf;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.roomname {
+    background-repeat: no-repeat;
+    background-position: 0.4em 0.4em;
+    background-size: 1em 1em;
+    border-radius: 8px; 
+}
+
+.roomname a{
+    text-decoration: none;
+}
+
+.safe .collapsed:hover,
+.safe .collapsed:active {
+  background-color: #a0cd8e;
+  /*border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;*/
+}
+
+.warning .collapsed:hover,
+.warning .collapsed:active {
+  background-color: #dca7a7;
+  /*border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;*/
+}
+
+.safe .expanded:hover,
+.safe .expanded:active {
+  background-color: #a0cd8e;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.warning .expanded:hover,
+.warning .expanded:active {
+  background-color: #dca7a7;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.warning {
+    background-color: #f2dede;
+}
+
+.safe {
+    background-color: #dff0d8;
+}
+
+.warning .roomname {
+    background-image: url(images/high_priority.svg);
+    background-size: 32px 32px;
+    color: #b94a48;
+}
+
+.safe .roomname {
+    background-image: url(images/ok.svg);
+    background-size: 32px 32px;
+    color: #468847;
+}
+
+.room .collapsible {
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.room .collapsible #content,
+.room .collapsible > p {
+    width: 90%;
+    text-align: left;
+    margin: auto;
+    font-size: 16px;
+}
+
+#content h2 {
+  text-align: left;
+}
+
+.room .warning .collapsible {
+    display: none;
+}
+
+.roomname h2 {
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    /*border: 1px solid black;*/
+}
+
+li {
+    list-style-position: inside;
+}
+
+li p {
+    white-space: nowrap;
+    display: inline;
+}
